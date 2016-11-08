@@ -56,6 +56,51 @@ void limpia(Lista *lista)
     free(actual);
 }
 
+int valor_inicio(Lista *lista)
+{
+    // TODO
+}
+
+int valor_fin(Lista *lista)
+{
+    // TODO
+}
+
+void agrega_inicio(Lista *lista, int valor)
+{
+    // TODO
+}
+
+void agrega_en(Lista *lista, int valor, int posicion)
+{
+    // TODO
+}
+
+int borra_inicio(Lista *lista)
+{
+    // TODO
+}
+
+int borra_fin(Lista *lista)
+{
+    // TODO
+}
+
+int borra_en(Lista *lista, int posicion)
+{
+    // TODO
+}
+
+int borra_valor(Lista *lista, int valor)
+{
+    // TODO
+}
+
+int esta_vacia(Lista *lista)
+{
+    // TODO
+}
+
 int main()
 {
     Lista *lista = crea(1);
