@@ -58,47 +58,65 @@ void limpia(Lista *lista)
 
 int valor_inicio(Lista *lista)
 {
-    // TODO
+    Lista *actual = lista;
+    return actual->valor;
 }
 
 int valor_fin(Lista *lista)
 {
-    // TODO
+    Lista *actual = lista;
+
+    while(actual->siguiente != NULL) {
+        actual = actual->siguiente;
+    }
+
+    return actual->valor;
 }
 
-void agrega_inicio(Lista *lista, int valor)
+Lista *agrega_inicio(Lista *lista, int valor)
 {
     // TODO
 }
 
-void agrega_en(Lista *lista, int valor, int posicion)
+Lista *agrega_en(Lista *lista, int valor, int posicion)
 {
     // TODO
 }
 
-int borra_inicio(Lista *lista)
+Lista *borra_inicio(Lista *lista)
 {
     // TODO
 }
 
-int borra_fin(Lista *lista)
+Lista *borra_fin(Lista *lista)
+{
+    Lista *actual =lista;
+    Lista *anterior =NULL;
+
+    while(actual->siguiente != NULL){
+        anterior=actual;
+        actual = actual->siguiente;
+
+    }
+    anterior->siguiente=NULL;
+    free(actual);
+    return lista;
+
+}
+
+Lista *borra_en(Lista *lista, int posicion)
 {
     // TODO
 }
 
-int borra_en(Lista *lista, int posicion)
-{
-    // TODO
-}
-
-int borra_valor(Lista *lista, int valor)
+Lista *borra_en_valor(Lista *lista, int valor)
 {
     // TODO
 }
 
 int esta_vacia(Lista *lista)
 {
-    // TODO
+    return (lista == NULL);
 }
 
 int main()
